@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <!-- Form Type: FieldContent -->
+        <service id="ic_core_field.form_type.field_content" class="IC\Bundle\Core\FieldBundle\Form\Type\FieldContentType">
+            <tag name="form.type" alias="fieldContent"/>
+            <call method="setLogger">
+                <argument type="service" id="logger"/>
+            </call>
+            <call method="setModelDataTransformerFactory">
+                <argument type="service" id="ic_core_field.service.data_transformer_factory.model"/>
+            </call>
+            <call method="setViewDataTransformerFactory">
+                <argument type="service" id="ic_core_field.service.data_transformer_factory.view"/>
+            </call>
+        </service>
+
+    </services>
+
+</container>

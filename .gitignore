@@ -1,0 +1,22 @@
+# App Specific Files
+/app/Resources/nodejs/node_modules
+/app/bootstrap.php.cache
+/app/cache/
+/app/config/common.yml
+/app/logs/
+/vendor/
+/web/*/
+
+# OS generated files
+._*
+.apdisk
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+*.swp
+.idea
+.nfs.*

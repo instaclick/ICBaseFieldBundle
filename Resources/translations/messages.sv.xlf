@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="sv" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="27e43522149dd5e54a4c9c2946f3e53a" resname="ic_core_field.option.default">
+        <source>ic_core_field.option.default</source>
+        <target>Berättar senare</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

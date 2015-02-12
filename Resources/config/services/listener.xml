@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <!-- Event Listener: Field Content Aware -->
+        <service id="ic_core_field.listener.field_content_aware"
+                 class="IC\Bundle\Core\FieldBundle\EventListener\Doctrine\FieldContentAwareListener">
+            <tag name="doctrine.event_listener" event="postLoad" method="postLoad"/>
+            <call method="setContainer">
+                <argument type="service" id="service_container" />
+            </call>
+        </service>
+
+    </services>
+
+</container>

@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <!-- Data Transformer Factory: Model -->
+        <service
+            id="ic_core_field.service.data_transformer_factory.model"
+            class="IC\Bundle\Core\FieldBundle\Service\DataTransformerFactory">
+            <call method="setTransformerClassName">
+                <argument>IC\Bundle\Core\FieldBundle\Form\DataTransformer\JsonToFieldSelectionListTransformer</argument>
+            </call>
+        </service>
+
+        <!-- Data Transformer Factory: View -->
+        <service
+            id="ic_core_field.service.data_transformer_factory.view"
+            class="IC\Bundle\Core\FieldBundle\Service\DataTransformerFactory">
+            <call method="setTransformerClassName">
+                <argument>IC\Bundle\Core\FieldBundle\Form\DataTransformer\FieldSelectionListToArrayTransformer</argument>
+            </call>
+        </service>
+
+        <!-- Data Transformer Factory: Default -->
+        <service id="ic_core_field.service.data_transformer_factory" alias="ic_core_field.service.data_transformer_factory.model"/>
+
+        <!-- Approval Field Service -->
+        <service id="ic_core_field.service.approvable_field" class="IC\Bundle\Core\FieldBundle\Service\ApprovableFieldService">
+        </service>
+    </services>
+
+</container>
